@@ -19,8 +19,7 @@ from better_python_lists import List
 
 my_list = List([1, None, 2, 3, 4, None, None, 5])
 compact_list = my_list.compact()
-print(compact_list)
-# => [1, 2, 3, 4, 5]
+print(compact_list) # => [1, 2, 3, 4, 5]
 ```
 
 You can also perform in-place compacting using the `compacted` method:
