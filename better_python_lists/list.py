@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
-
 
 class List(list):
     def compact(self, filter_list: list = [None]) -> List:
