@@ -37,3 +37,36 @@ another_list = List([1, "None", 2, None, 3, "N/A"])
 another_list.compacted(filter_list=[None, "None", "N/A"])
 print(another_list)  # => [1, 2, 3]
 ```
+
+### Flatten
+
+The methods `flatten` and `flattened` flatten an arbitrarily nested List into a
+single-level one.
+
+```py
+nested_list: List = List(
+  [
+    [
+      "a"
+    ],
+    "b",
+    5,
+    [
+      6,
+      7,
+      [
+        8,
+        9,
+        [
+          10
+        ]
+      ]
+    ]
+  ]
+)
+flat_list = nested_list.flatten()
+print(flat_list) # => ["a", "b", 5, 6, 7, 8, 9, 10]
+```
+
+As with `compact/compacted`, `flatten` creates a copy of the List, and `flattened`
+performs in-place replacement.
