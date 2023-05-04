@@ -1,3 +1,7 @@
-.venv
+__pycache__
+__pycache__/
 .pytest_cache
+.venv
+*.py[cod]
+*.pyc
 dist/
