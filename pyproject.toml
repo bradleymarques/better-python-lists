@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "better-python-lists"
-version = "0.1.0"
+version = "0.1.2"
 description = "Adds some useful methods on top of Python lists"
 authors = ["Bradley Marques <bradleyrcmarques@gmail.com>"]
 license = "GNU GENERAL PUBLIC LICENSE v3"

@@ -11,3 +11,8 @@
 
 + `poetry shell`
 + `pytest`
+
+## Building and publishing
+
+`poetry build`
+`poetry publish`
