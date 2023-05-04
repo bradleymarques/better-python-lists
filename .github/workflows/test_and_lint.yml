@@ -1,4 +1,4 @@
-name: Backend Tests
+name: Tests and Linting
 
 on:
   push:
@@ -31,14 +31,14 @@ jobs:
         id: cached-poetry-dependencies
         uses: actions/cache@v2
         with:
-          path: ./backend/.venv
+          path: ./.venv
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction --no-root
 
-      - name: Run tests with coverage
+      - name: Run tests
         run: |
           source ./.venv/bin/activate
           pytest .
