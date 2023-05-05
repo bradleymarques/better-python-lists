@@ -12,8 +12,11 @@ Makes lists in Python better, by adding some useful methods.
 ## Basic Usage
 
 ```py
-List([1, None, 2, 3, 4, None, None, 5]).compact() # => List[(1, 2, 3, 4, 5)]
-List([["a"], "b", 5, [6, 7, [8, 9, [10]]]]).flatten() # => List(["a", "b", 5, 6, 7, 8, 9, 10])
+List([1, None, 2, 3, 4, None, None, 5]).compact()
+# => List[(1, 2, 3, 4, 5)]
+
+List([["a"], "b", 5, [6, 7, [8, 9, [10]]]]).flatten()
+# => List(["a", "b", 5, 6, 7, 8, 9, 10])
 ```
 
 ## Details
