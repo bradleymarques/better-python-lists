@@ -2,11 +2,21 @@
 
 Makes lists in Python better, by adding some useful methods.
 
++ `List.compact()` - removes all `None` values from the List.
++ `List.flatten()` - flattens an arbitrarily nested List.
+
 ## Installation
 
 `pip install better-python-lists`
 
 ## Basic Usage
+
+```py
+List([1, None, 2, 3, 4, None, None, 5]).compact() # => List[(1, 2, 3, 4, 5)]
+List([["a"], "b", 5, [6, 7, [8, 9, [10]]]]).flatten() # => List(["a", "b", 5, 6, 7, 8, 9, 10])
+```
+
+## Details
 
 ### Compact
 
@@ -44,26 +54,7 @@ The methods `flatten` and `flattened` flatten an arbitrarily nested List into a
 single-level one.
 
 ```py
-nested_list: List = List(
-  [
-    [
-      "a"
-    ],
-    "b",
-    5,
-    [
-      6,
-      7,
-      [
-        8,
-        9,
-        [
-          10
-        ]
-      ]
-    ]
-  ]
-)
+nested_list: List = List([["a"], "b", 5, [6, 7, [8, 9, [10]]]])
 flat_list = nested_list.flatten()
 print(flat_list) # => ["a", "b", 5, 6, 7, 8, 9, 10]
 ```
